@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<style type="text/css">
+body{
+	text-align: center;
+}
+.block{
+	margin:0 auto;
+	text-align:center;
+}
+
+.question, .answer{
+	display:none;
+}
+
+</style>
+
+<script type="text/javascript">
+  var currentQues = "q0";
+
+  function popQues(id){
+  	if(id == "q19"){
+  		document.getElementById("b1").innerHTML='中吧';
+  		document.getElementById("b0").style.display='none';
+  	}
+  	document.getElementById(currentQues).style.display='none';
+  	document.getElementById(id).style.display='block';
+  	currentQues = id;
+  }
+
+  function receiveAns(num){
+  	var nextQues;
+    var tmp = Number(currentQues.match(/[^q]+/))+1;
+    console.log(tmp);
+    if(tmp<=19){
+      nextQues="q"+tmp;
+    }
+    else{
+      alert("我爱你\n为了寻找你\n我搬进了鸟的眼睛\n时常盯着过往的风\n也忘了听猎人的枪声");
+      window.close();
+    }
+  	// switch(currentQues){
+  	// 	case "q0": nextQues = (num==1)? "q1":"q1"; break;
+  	// 	case "q1": nextQues = (num==1)? "q2":"q3"; break;
+  	// 	case "q2": nextQues = (num==1)? "q3":"q4"; break;
+  	// 	case "q3": nextQues = (num==1)? "q4":"q5"; break;
+  	// 	case "q4": nextQues = (num==1)? "q5":"q6"; break;
+  	// 	case "q5": nextQues = (num==1)? "q6":"q7"; break;
+	  // 	case "q6": nextQues = (num==1)? "q7":"q8"; break;
+	  // 	case "q7": nextQues = (num==1)? "q9":"q10"; break;
+	  // 	case "q8": nextQues = (num==1)? "q11":"q12"; break;
+	  // 	case "q9": nextQues = (num==1)? "q10":"q11"; break;
+	  // 	case "q10": nextQues = (num==1)? "q12":"q13"; break;
+	  // 	case "q11": nextQues = (num==1)? "q14":"q15"; break;
+	  // 	case "q12": nextQues = (num==1)? "q13":"q15"; break;
+	  // 	case "q13": nextQues = (num==1)? "q14":"q16"; break;
+	  // 	case "q14": nextQues = (num==1)? "ans":"ans"; break;
+	  // 	case "q15": nextQues = (num==1)? "ans":"ans"; break;
+	  // 	case "q16": nextQues = (num==1)? "ans":"ans"; break;
+	  // 	case "q17": nextQues = (num==1)? "ans":"ans"; break;
+	  // 	case "q18": nextQues = (num==1)? "ans":"ans"; break;
+  	// 	default:
+  	// 	alert("我爱你\n为了寻找你\n我搬进了鸟的眼睛\n经常盯着路过的风\n也忘了听猎人的枪声");
+  	// 	window.close();
+  	// }
+  	popQues(nextQues);
+  }
+</script>
+</head>
+
+<body>
+<div class=block>
+<div id="q0">开始你的爱情测试？</div>
+<div class="question" id="q1">你相信命运吗?</div>
+<div class="question" id="q2">比起爱情片,你更喜欢看侦探片?</div>
+<div class="question" id="q3">被不喜欢的人追,你也会觉得开心?</div>
+<div class="question" id="q4">你是不是更喜欢穿着打扮得强势一点？</div>
+<div class="question" id="q5">你有想成为明星的念头？</div>
+<div class="question" id="q6">你曾经写过情书？</div>
+<div class="question" id="q7">你觉得自己很容易就会恋爱？</div>
+<div class="question" id="q8">你的初吻已经献出去了？</div>
+<div class="question" id="q9">即使在喜欢的异性面前，你也会表现得态度冷淡？</div>
+<div class="question" id="q10">追你的异性不是你喜欢的类型，你仍会试着交往？</div>
+<div class="question" id="q11">你通常都会穿得很职业？</div>
+<div class="question" id="q12">即使你喜欢的异性已经有了另一半，你也会向对方表白？</div>
+<div class="question" id="q13">你觉得自己的另一半是最优秀的？</div>
+<div class="question" id="q14">已经有另一半了，但是你还是会不由自主地爱上其他人？</div>
+<div class="question" id="q15">你非常想谈一场轰轰烈烈的恋爱？</div>
+<div class="question" id="q16">你的生日会与另一半一起度过？</div>
+<div class="question" id="q17">在红、黄、蓝三种颜色中，你最喜欢红色？</div>
+<div class="question" id="q18">你相信一见钟情？</div>
+<div class="answer" id="q19">
+<p>傻瓜</p>
+<p>哪有什么爱情</p>
+<p>洗洗睡吧</p>
+</div>
+
+<button class="b0" id="b0" onclick=receiveAns(0)>否</button>
+<button class="b1" id="b1" onclick=receiveAns(1)>是</button>
+
+</div>
+</body>
+</html>
