@@ -57,7 +57,7 @@ normal text
 ## Remember to
 ### Put a Space
 #### after 
-##### `#`s
+##### #s
 ###### Smallest
 normal text
 
@@ -67,7 +67,7 @@ normal text
 > - 鲁迅
 ```
 > Start line with `>`
-> - 鲁迅
+> -鲁迅
 
 ## Codes
 
@@ -108,5 +108,5 @@ Content from cell 1 | Content from cell 2
 Content in the first column | Content in the second column
 
 ## Images
-:smiling_imp::smiling_imp:Fighting for this!:smiling_imp::smiling_imp:
-![C63S](https://octodex.github.com/images/yaktocat.png)
+:smiling_imp::smiling_imp: Fighting for this! :smiling_imp::smiling_imp:
+![C63S](/images/c63s.jpeg)
