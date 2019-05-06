@@ -3,9 +3,11 @@
 ## Text
 
 ```
-Print text with *Italic* or **Bold** or _**Both**_
+Print text with *Italic* or **Bold** or ***Both***.
+This is how to add a [link](https://github.com/nickszhu)
 ```
-Print text with *Italic* or **Bold** or _**Both**_
+Print text with *Italic* or **Bold** or ***Both***.
+This is how to add a [link](https://github.com/nickszhu)
 
 ## Lists
 ```
@@ -35,3 +37,28 @@ Subpoint
 - put two space
 - before the dash
   - like this
+
+## Headers
+Start line with 1 to 6 #s to represent headers
+```
+# Largest
+## Remember to
+### Put a Space
+#### after 
+##### #s
+###### Smallest
+```
+# Largest
+## Remember to
+### Put a Space
+#### after 
+##### #s
+###### Smallest
+
+## Quotes
+```
+> Start line with >
+> -鲁迅
+```
+> Start line with >
+> -鲁迅
