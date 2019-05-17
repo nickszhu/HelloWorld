@@ -11,8 +11,11 @@
 
 ### Basic Control:
 `F` : focus on a selected object
+
 `Left click` : select
+
 `Middle click` : drag
+
 `Right click` : rotate
 
 
