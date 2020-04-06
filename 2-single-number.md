@@ -33,9 +33,9 @@ for (int i : nums) {
 
 # General Case
 
-Now, we generalize to the case of 32-bit numbers instead of 1-bit numbers. One possible way is to use 32 `m-bit` counters for each bit in the integers. However, we want to use m `32-bit` counters because bit operation is applied to one bit and is independent of other bits. So we have m counters, `cm, ... , c1`, with each have 32-bit, `r-th` bit counts the `r-th` bit of the input numbers. That means if the count of `1` at `r-th` bit of all input numbers is `q` and `q' = q % k = q'm...q'1`, then `r-th` bit of `c1` will equal to `q'1`.
+Now, we generalize to the case of 32-bit numbers instead of 1-bit numbers. One possible way is to use 32 `m-bit` counters for each bit in the integers. However, we want to use m `32-bit` counters because bit operation is applied to one bit and is independent of other bits. So we have m counters, `cm, ... , c1`, with each have 32-bit, `r-th` bit counts the `r-th` bit of the input numbers. That means if the count of `1` at `r-th` bit of all input numbers is `q` and `q' = q % k = (q'm...q'1)_2`, then `r-th` bit of `c1` will equal to `q'1`.
 
-Next problem is what to return. After we scan all the elements in the array, the elements appear `k` times won't contribute to the counters because counters will reset to `0` when they hit `k`. What contributes to counters is the single number which appears `p` times (if `p > k`, the first multiples of `k`s won't contribute, so we can set `p' = p % k`). `p' = p'm...p'1`. We can prove that if `p'j = 1`, then `cj` is equal to the single number.
+Next problem is what to return. After we scan all the elements in the array, the elements appear `k` times won't contribute to the counters because counters will reset to `0` when they hit `k`. What contributes to counters is the single number which appears `p` times (if `p > k`, the first multiples of `k`s won't contribute, so we can set `p' = p % k`). `p' = (p'm...p'1)_2`. We can prove that if `p'j = 1`, then `cj` is equal to the single number.
 
 # Examples
 
@@ -57,7 +57,7 @@ public int singleNumber(int[] nums) {
 
 2. `k=3, p=1`
 
-Since `k=3`, `m=2`. Since `2^m > k`, we need a mask. `k_2 = '11'` so `mask = ~(x1 & x2)`.
+Since `k=3`, `m=2`. Since `2^m > k`, we need a mask. `k = (11)_2` so `mask = ~(x1 & x2)`.
 
 ```java
 public int singleNumber(int[] nums) {
